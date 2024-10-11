@@ -200,7 +200,38 @@ La base de datos consta de las siguientes tablas:
 ## 5.**Proveedores**:
     - Cada proveedor debe tener un identificador único, nombre de la empresa, nombre del contacto, teléfono y dirección.
     - Se debe llevar un registro de las órdenes de compra realizadas a los proveedores, con los productos solicitados, la fecha de la orden, y la cantidad de productos recibidos.
+
     
+## Consultas 🎉:    
+
+
+## 1.Listar todos los productos de cosméticos de un tipo específico (por ejemplo, "labial"):
+
+SELECT P.nombre AS Nombre, P.descripcion, C.tipo, C.tono_color, C.fecha_expiracion
+
+FROM Productos P
+
+JOIN Cosmeticos C ON P.id_producto = C.id_producto
+
+WHERE C.tipo = 'labial';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
